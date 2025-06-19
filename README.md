@@ -1,5 +1,3 @@
-
-text
 # Monica Dhieu Portfolio Website
 
 This is a responsive personal portfolio website showcasing Monica Dhieu’s skills, projects, resume, and contact information. Built with HTML, CSS, and JavaScript, the site features clean design, accessible navigation, and mobile-friendly layouts. It serves as a professional platform to present creative and technical expertise to potential employers, collaborators, and clients.
