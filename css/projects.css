@@ -1,0 +1,196 @@
+/*
+Projects-page Styling:
+
+1. Base styles: Neutral background and readable font stack ensure good legibility and aesthetics.
+2. Header layout: Flexbox usage for horizontal alignment with hover transitions.
+3. Navigation: Clear spacing and hover color changes improve usability and visual feedback.
+4. Main content: Padding and layout provide a spacious, balanced look, supporting readability and focus on projects.
+5. Project sections: Flex layout with image and text side-by-side for effective portfolio pattern.
+6. Footer: Organized with flexbox, spaced sections, and interactive social icons.
+7. Responsive design: Media queries adapt layout for smaller screens, enhancing mobile usability.
+*/
+
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    margin: 0; 
+    background: #f5f5f5; 
+    color: #222; 
+}
+
+/* Header */
+header {
+    display: flex; 
+    align-items: center; 
+    padding: 24px 48px 0 48px; 
+    justify-content: flex-start; 
+    position: relative;
+    background: #f5f5f5; 
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ffc107; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+}
+
+.name-header {
+    font-weight: bold;
+    font-size: 1.15em;
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s; /* Smooth color change on hover */
+}
+
+.name-header:hover {
+    color: #ffd600;
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.role {
+    margin-left: 8px; 
+    color: #888; 
+    font-size: 1em;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    margin-left: 28px; 
+    font-size: 1em;
+    transition: color 0.2s; 
+}
+
+nav a:hover {
+    color: #ffd600; 
+    background: transparent; 
+    padding: 2px 8px; 
+    border-radius: 4px;
+}
+
+/* Main content area */
+main {
+  padding: 48px; 
+}
+
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 32px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px; /* Space below each project */
+}
+
+.project-info {
+  flex: 1; 
+  margin-right: 32px;
+}
+
+.project img {
+  width: 320px;
+  height: auto;
+  border-radius: 8px; 
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: #fafafa; 
+    border-top: 1px solid #e0e0e0; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 28px 48px 18px 48px; 
+    font-size: 15px;
+    box-sizing: border-box;
+    margin-top: 48px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px; /* Space between sections */
+    min-width: 120px;
+}
+
+.footer-label {
+    font-weight: bold;
+    margin-bottom: 2px;
+    color: #222;
+}
+
+.footer-info {
+    color: #444;
+    margin-bottom: 8px;
+    font-size: 0.97em;
+}
+
+.footer-social {
+    display: flex;
+    gap: 8px; 
+    margin-top: 4px;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    filter: grayscale(100%); 
+    transition: filter 0.2s;
+}
+
+.icon:hover {
+    filter: grayscale(0%); 
+}
+
+.footer-right {
+    align-items: flex-end;
+    text-align: right;
+    min-width: 180px;
+    margin-right: 0;
+}
+
+.footer-powered {
+    font-size: 0.97em;
+    color: #444;
+    margin-top: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column; 
+        gap: 32px; 
+    }
+    .intro {
+        max-width: 90vw; 
+    }
+    .profile-img {
+        width: 220px;
+        height: 220px;
+    }
+    footer {
+        flex-direction: column; 
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .footer-section {
+        margin-right: 0;
+        margin-bottom: 8px; 
+    }
+    .footer-right {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
