@@ -1,0 +1,123 @@
+<!--
+Projects-page Includes:
+
+1. Header section with site title, role, and navigation links
+2. Site title with link to homepage
+3. Role (profession description)
+4. Navigation menu linking to other landing pages
+5. Main content area
+6. Footer section with contact info and social links
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Monica Dhieu Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to projects page stylesheet -->
+    <link rel="stylesheet" href="projects.css" />
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <!-- Decorative dot before the site name -->
+        <span class="dot"></span>
+        <!-- Site name linking to homepage -->
+        <a href="index.html" class="name-header" id="nameHeader">Monica Dhieu</a>
+        <!-- Role description -->
+        <span class="role">Visual Artist</span>
+        <!-- Navigation menu -->
+        <nav>
+            <a href="resume.html">Resume &nbsp; &nbsp; |</a>
+            <!-- Active page highlighted -->
+            <a href="projects.html" class="active">Projects &nbsp; &nbsp; |</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header> 
+
+    <!-- Main content -->
+    <main>
+        <h1>Projects</h1>
+
+        <!-- Project 1: HarMonik Codes -->
+        <section class="project">
+            <div class="project-info">
+                <h2>HarMonik Codes</h2>
+                <p style="text-align: justify;">
+                    Collection of github codes with comments and README files to guide on functionality and use. Features: the 'Mars Rover 100Sol Photo Viewer', 'TVmaze Show Search', 'Forks & Folks Recie App' and more codes at &nbsp;
+                    <a href="https://github.com/m-dhieu">m-dhieu</a>.
+                </p>
+            </div>
+            <!-- Image representing the project -->
+            <img src="https://i.imgur.com/S5GpoqG.jpeg" alt="HarMonik Codes Image">
+        </section>    
+
+        <!-- Project 2: HarMonik Visuals -->
+        <section class="project">
+            <div class="project-info">
+                <h2>HarMonik Visuals</h2>
+                <p style="text-align: justify;">
+                    Collection of photography pieces; a narration of nature's lived experiences. From vibrant sunsets to playful oceans to silent echoes, each hue whispers... These are my &nbsp;
+                    <a href="https://harmonikcollective.pixieset.com/harmonikvisuals/">musings</a> &nbsp;—&nbsp;visual poems that celebrate the beauty, mystery, and emotion woven into the natural world.
+                </p>
+            </div>
+            <!-- Image representing the project -->
+            <img src="https://i.imgur.com/WHPZim4.jpeg" alt="HarMonik Visuals Image">
+        </section>
+
+        <!-- Project 3: HarMonik Crafts -->
+        <section class="project">
+            <div class="project-info">
+                <h2>HarMonik Crafts</h2>
+                <p style="text-align: justify;">
+                    A collection of art pieces — drawings, paintings, and crafts — that reflect my perception of the beauty and complexity of the human spirit. Inspired by nature’s kaleidoscope and the emotions shaping our shared experience, these works are my &nbsp;&nbsp;
+                    <a href="https://harmonikcollective.pixieset.com/harmonikcrafts/">musings</a>.
+                </p>
+            </div>
+            <!-- Image representing the project -->
+            <img src="https://i.imgur.com/AdObmlM.jpeg" alt="HarMonik Crafts Image">
+        </section>    
+    </main>
+
+    <!-- Footer section with contact info and social links -->
+    <footer>
+        <!-- Phone contact info -->
+        <div class="footer-section">
+            <div class="footer-label">Phone</div>
+            <div class="footer-info">+211-988-877-748</div>
+        </div>
+        <!-- Email contact info -->
+        <div class="footer-section">
+            <div class="footer-label">Email</div>
+            <div class="footer-info">m.dhieu@alustudent.com</div>
+        </div>
+        <!-- Social media links -->
+        <div class="footer-section">
+            <div class="footer-label">Follow Me</div>
+            <div class="footer-social">
+                <!-- LinkedIn profile link with SVG Icon -->
+                <a href="https://www.linkedin.com/in/monica-aben-moses-dhieu/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#0A66C2" class="icon" role="img" aria-hidden="true">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.756 1.381-1.553 2.845-1.553 3.042 0 3.604 2.003 3.604 4.605v5.581z"/>
+                    </svg>
+                </a>
+                <!-- Facebook profile link with SVG Icon -->
+                <a href="https://www.facebook.com/ms.dhieu" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#1877F3" class="icon" role="img" aria-hidden="true">
+                        <path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.326v21.348c0 .734.592 1.326 1.325 1.326h11.495v-9.294h-3.124v-3.622h3.124v-2.672c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12v9.294h6.116c.73 0 1.324-.592 1.324-1.326v-21.349c0-.734-.594-1.326-1.326-1.326z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <!-- Copyright section -->
+        <div class="footer-section footer-right">
+            <div class="footer-copyright">© 2025</div>
+            <div class="footer-powered">HarMonik Collective</div>
+        </div>
+    </footer>
+
+    <!-- Link to the JavaScript file for simple navigation highlight -->
+    <script src="projects.js"></script>
+</body>
+</html>
