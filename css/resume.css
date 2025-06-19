@@ -1,0 +1,266 @@
+/* 
+Resume-page Styling:
+
+1. Typography: Clear, professional font stack is easy to read on screens and compatible with ATS systems.
+2. Layout: Flexbox is used effectively for header and section layouts, ensuring content is well-aligned and spaced.
+3. Color and Contrast: The color palette provides sufficient contrast between text and background, improving readability and accessibility.
+4. Responsiveness: The media query adjusts layout for smaller screens, stacking elements and resizing images for mobile usability.
+5. Whitespace and Margins: Generous padding and margins create a clean, uncluttered look that guides the reader’s eye naturally.
+6. Interactivity: Smooth hover transitions on navigation links enhance user experience without distraction.
+*/
+
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    margin: 0; 
+    background: #f5f5f5;
+    color: #222; 
+}
+
+/* Header */
+header {
+    display: flex; 
+    align-items: center; 
+    padding: 24px 48px 0 48px; 
+    justify-content: flex-start; 
+    position: relative;
+    background: #f5f5f5;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ffc107; 
+    border-radius: 50%; 
+    margin-right: 10px;
+}
+
+.name-header {
+    font-weight: bold;
+    font-size: 1.15em;
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s; 
+}
+
+.name-header:hover {
+    color: #ffd600; 
+    cursor: pointer; 
+}
+
+.role {
+    margin-left: 8px; 
+    color: #888; 
+    font-size: 1em;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    margin-left: 28px; 
+    font-size: 1em;
+    transition: color 0.2s; 
+}
+
+nav a:hover {
+    color: #ffd600; 
+    background: transparent;
+    padding: 2px 8px; 
+    border-radius: 4px; 
+}
+
+/* Main content */
+main {
+  max-width: 1100px; 
+  margin: 0 auto; 
+  background: #f5f5f5; 
+  padding: 48px;
+}
+
+.resume-section h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.section-row {
+  display: flex; 
+  align-items: flex-start; 
+  margin-bottom: 40px; 
+}
+
+.section-title {
+  flex: 1; 
+  font-size: 1.5em;
+  font-weight: bold;
+  min-width: 180px; 
+  margin-right: 40px; 
+}
+
+.section-content {
+  flex: 3; 
+}
+
+.item {
+  display: flex;
+  align-items: flex-start; 
+  margin-bottom: 25px; 
+}
+
+.date {
+  width: 150px; 
+  color: #555; 
+  font-size: 1em;
+  margin-right: 10px; 
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.job-title {
+  font-weight: bold;
+  margin-right: 10px; 
+}
+
+.item p {
+  margin: 0;
+  color: #444; 
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd; 
+  margin: 40px 0; 
+}
+
+.skills-section {
+  display: flex; 
+  align-items: flex-start; 
+  margin: 60px 0 0 0;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0; 
+  margin-bottom: 40px;
+}
+
+.skills-title {
+  flex: 1;
+  min-width: 180px;
+  margin-right: 40px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #222;
+  padding-top: 4px;
+}
+
+.skills-list {
+  flex: 3;
+}
+
+.skills-list ul {
+  list-style: disc inside; 
+  margin: 0;
+  padding: 0;
+}
+
+.skills-list li {
+  margin-bottom: 18px;
+  color: #444;
+  font-size: 1.1em;
+  line-height: 1.5; /* Line height for readability */
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: #fafafa; 
+    border-top: 1px solid #e0e0e0; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 28px 48px 18px 48px; 
+    font-size: 15px;
+    box-sizing: border-box;
+    margin-top: 48px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px; /* Space between sections */
+    min-width: 120px;
+}
+
+.footer-label {
+    font-weight: bold;
+    margin-bottom: 2px;
+    color: #222;
+}
+
+.footer-info {
+    color: #444;
+    margin-bottom: 8px;
+    font-size: 0.97em;
+}
+
+.footer-social {
+    display: flex;
+    gap: 8px; 
+    margin-top: 4px;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    filter: grayscale(100%); 
+    transition: filter 0.2s;
+}
+
+.icon:hover {
+    filter: grayscale(0%); 
+}
+
+.footer-right {
+    align-items: flex-end;
+    text-align: right;
+    min-width: 180px;
+    margin-right: 0;
+}
+
+.footer-powered {
+    font-size: 0.97em;
+    color: #444;
+    margin-top: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column; 
+        gap: 32px; 
+    }
+    .intro {
+        max-width: 90vw; /* Limit width on small screens */
+    }
+    .profile-img {
+        width: 220px;
+        height: 220px;
+    }
+    footer {
+        flex-direction: column; 
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .footer-section {
+        margin-right: 0;
+        margin-bottom: 8px; /* Space below each section */
+    }
+    .footer-right {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
