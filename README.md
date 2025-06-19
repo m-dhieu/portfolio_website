@@ -22,12 +22,8 @@ This is a responsive personal portfolio website showcasing Monica Dhieu’s skil
 ### Step 1: Clone the repository to your local machine. Use:
 git clone https://github.com/m-dhieu/portfolio-website.git
 
-text
-
 ### Step 2: Navigate to the project directory. Use:
 cd portfolio-website
-
-text
 
 ### Step 3: Open the website in your browser.
 - View the webpage using github pages:  [https://m-dhieu.github.io/portfolio_website](https://m-dhieu.github.io/portfolio_website)
@@ -47,6 +43,7 @@ text
 
 ## Directory Structure
 
+```
 portfolio-website/
  ├── index.html                 # Homepage (landing page)
  ├── resume.html                # Resume page
@@ -66,7 +63,7 @@ portfolio-website/
  ├── LICENSE                   # lisense
  └── README.md                 # Project documentation
 
-text
+```
 
 ---
 
