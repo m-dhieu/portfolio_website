@@ -1,0 +1,268 @@
+/* 
+Contact-page Styling:
+
+1. Base styles: Sets a clean font stack, neutral background, and readable text color.
+2. Header: Flexbox aligns the logo dot, name, role, and navigation horizontally with spacing. Navigation links highlight in yellow on hover.
+3. Main contact section: Flexbox layout with two columns — contact info and form. Form inputs and textarea are styled for usability and accessibility.
+4. Buttons: Styled with distinct color and hover effect for user interaction.
+5. Footer: Flexbox layout with spaced sections, grayscale social icons that colorize on hover, and responsive stacking on smaller screens.
+6. Responsive design: Media query adjusts main content and footer layout for narrow viewports, stacking elements vertically and resizing images. 
+*/
+
+/* Base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  padding: 24px 48px 0 48px;
+  justify-content: flex-start;
+  position: relative;
+  background: #f5f5f5;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ffc107;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.name-header {
+  font-weight: bold;
+  font-size: 1.15em;
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.name-header:hover,
+.name-header:focus {
+  color: #ffd600;
+  cursor: pointer;
+  outline: none;
+}
+
+.role {
+  margin-left: 8px;
+  color: #888;
+  font-size: 1em;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav a {
+  color: #222;
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ffd600;
+  background: transparent;
+  padding: 2px 8px;
+  border-radius: 4px;
+  outline-offset: 2px;
+  outline: 2px solid transparent;
+}
+
+nav a:focus-visible {
+  outline-color: #ffd600;
+}
+
+/* Main Section */
+main {
+  padding: 40px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-section {
+  display: flex;
+  gap: 80px;
+  width: 80%;
+  max-width: 1100px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  min-width: 240px;
+  flex: 1 1 240px;
+}
+
+.contact-info h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+form {
+  flex: 2 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ffd600;
+  outline: none;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background: #e3a100;
+  color: #222;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 24px;
+  padding: 14px 0;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background: #c18c00;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background: #fafafa;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 28px 48px 18px 48px;
+  font-size: 15px;
+  box-sizing: border-box;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  min-width: 120px;
+}
+
+.footer-label {
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: #222;
+}
+
+.footer-info {
+  color: #444;
+  margin-bottom: 8px;
+  font-size: 0.97em;
+}
+
+.footer-social {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  filter: grayscale(100%);
+  transition: filter 0.2s;
+}
+
+.icon:hover,
+.icon:focus-visible {
+  filter: grayscale(0%);
+  outline: none;
+}
+
+.footer-right {
+  align-items: flex-end;
+  text-align: right;
+  min-width: 180px;
+  margin-right: 0;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.footer-powered {
+  margin-top: 2px;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .contact-section {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+  .contact-info {
+    min-width: auto;
+  }
+  form {
+    flex: 1 1 100%;
+  }
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px 24px;
+  }
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .footer-right {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
