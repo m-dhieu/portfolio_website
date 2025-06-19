@@ -1,6 +1,6 @@
 # Monica Dhieu Portfolio Website
 
-This is a responsive personal portfolio website showcasing Monica Dhieu’s skills, projects, resume, and contact information. Built with HTML, CSS, and JavaScript, the site features clean design, accessible navigation, and mobile-friendly layouts. It serves as a professional platform to present creative and technical expertise to potential employers, collaborators, and clients.
+This is a responsive personal portfolio website showcasing Monica Dhieu's skills, projects, resume, and contact information. Built with HTML, CSS, and JavaScript, the site features clean design, accessible navigation, and mobile-friendly layouts. It serves as a professional platform to present creative and technical expertise to potential employers, collaborators, and clients.
 
 ---
 
@@ -20,22 +20,23 @@ This is a responsive personal portfolio website showcasing Monica Dhieu’s skil
 ## Setup Instructions
 
 ### Step 1: Clone the repository to your local machine. Use:
-git clone https://github.com/m-dhieu/portfolio-website.git
+git clone https://github.com/m-dhieu/portfolio_website.git
 
 ### Step 2: Navigate to the project directory. Use:
-cd portfolio-website
+cd portfolio_website
 
 ### Step 3: Open the website in your browser.
-- View the webpage using github pages:  [https://m-dhieu.github.io/portfolio_website](https://m-dhieu.github.io/portfolio_website)
-- You can open any of the HTML files directly (e.g., `index.html`, `resume.html`, `projects.html`, `contact.html`) by double-clicking or using a live server extension in your code editor.
+- View the webpage using GitHub Pages:  [https://m-dhieu.github.io/portfolio_website](https://m-dhieu.github.io/portfolio_website)
+- You can also open any of the HTML files directly (e.g., `index.html`, `resume.html`, `projects.html`, `contact.html`) by double-clicking or using a live server extension in your code editor.
 
 ---
 
 ## Usage Instructions
 
 - Navigate through the pages using the header navigation links: Resume, Projects, Contact.
+- Click on the Header-name 'Monica Dhieu' to go back to the homepage.
 - Use the contact form to send messages (form submission currently shows an alert and resets the form).
-- Explore the projects page to view Monica’s coding projects, visuals, and crafts.
+- Explore the projects page to view Monica's coding projects, visuals, and crafts.
 - View the resume page for detailed work experience, education, and skills.
 - The website is responsive and adapts to different screen sizes for optimal viewing on desktops, tablets, and mobile devices.
 
@@ -49,19 +50,19 @@ portfolio-website/
  ├── resume.html                # Resume page
  ├── projects.html              # Projects page
  ├── contact.html               # Contact page
- ├── css/                      # Stylesheets folder
- │   ├──styles.css            # Homepage and global styling (if any)
+ ├── css/                       # Stylesheets folder
+ │   ├──styles.css              # Homepage and global styling (if any)
  │   ├── resume.css             # Resume page styles
  │   ├── projects.css           # Projects page styles
  │   └── contact.css            # Contact page styles
- ├── js/                       # JavaScript files folder
- │   ├──script.js            # Homepage and global JavaScript (if any)
+ ├── js/                        # JavaScript files folder
+ │   ├──script.js               # Homepage and global JavaScript (if any)
  │   ├── resume.js              # Resume page script
  │   ├── projects.js            # Projects page script
  │   └── contact.js             # Contact page script
- ├── .gitignore                    # file tracker
- ├── LICENSE                   # lisense
- └── README.md                 # Project documentation
+ ├── .gitignore                 # File tracker
+ ├── LICENSE                    # Lisense
+ └── README.md                  # Project documentation
 
 ```
 
@@ -91,7 +92,7 @@ Welcome to contribute:
 
 4. Push to your fork and open a pull request.
 
-Thank you for considering to contribute. Feel free to open issues for questions, suggestions, or bug reports.
+Thank you for considering contributing. Feel free to open issues for questions, suggestions, or bug reports.
 
 ---
 
