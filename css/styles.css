@@ -1,0 +1,296 @@
+/* 
+Homepage Styling:
+
+1. Base styles: Sets a neutral background and readable font stack.
+2. Header: Uses flexbox for horizontal alignment of logo, role, and navigation with hover color transitions.
+3. Main content: Flex layout centers profile image and intro side by side with spacing and a heading.
+4. Buttons: Circular, color-coded buttons with hover effects.
+5. Footer: Flexbox layout with spaced sections, grayscale social icons that colorize on hover, and responsive stacking on smaller screens.
+6. Responsive design: Media queries adapt layout for smaller screens by stacking main content and footer sections vertically, resizing images and adjusting spacing.
+*/
+
+/* Base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  padding: 24px 48px 0 48px;
+  justify-content: flex-start;
+  position: relative;
+  background: #f5f5f5;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ffc107;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.name-header {
+  font-weight: bold;
+  font-size: 1.15em;
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.name-header:hover,
+.name-header:focus {
+  color: #ffd600;
+  cursor: pointer;
+  outline: none;
+}
+
+.role {
+  margin-left: 8px;
+  color: #888;
+  font-size: 1em;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav a {
+  color: #222;
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ffd600;
+  background: transparent;
+  padding: 2px 8px;
+  border-radius: 4px;
+  outline-offset: 2px;
+  outline: 2px solid transparent;
+}
+
+nav a:focus-visible {
+  outline-color: #ffd600;
+}
+
+/* Main Section */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+  gap: 64px;
+  padding: 0 24px;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  loading: lazy;
+}
+
+.intro {
+  max-width: 420px;
+  flex: 1 1 320px;
+}
+
+.intro h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+.intro h2 {
+  font-size: 1.1em;
+  margin: 0 0 12px 0;
+  font-weight: bold;
+}
+
+.intro p {
+  font-size: 1em;
+  color: #444;
+  margin-bottom: 36px;
+  margin-top: 0;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.buttons {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.circle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: #222;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  border: 2px solid transparent; /* Prevent layout shift on hover */
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.circle-btn:focus-visible {
+  outline: 2px solid #ffd600;
+  outline-offset: 4px;
+}
+
+.resume-btn {
+  background: #ffc107;
+}
+
+.projects-btn {
+  background: #f44336;
+  color: #fff;
+}
+
+.contact-btn {
+  background: #4dd0e1;
+  color: #222;
+}
+
+.circle-btn:hover,
+.circle-btn:focus {
+  background: #fff;
+  color: #222;
+  border: 2px solid #222;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background: #fafafa;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 40px;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 24px;
+  min-width: 120px;
+}
+
+.footer-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #222;
+  font-size: 0.95em;
+}
+
+.footer-info {
+  color: #444;
+  margin-bottom: 6px;
+  font-size: 0.9em;
+}
+
+.footer-social {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  filter: grayscale(100%);
+  transition: filter 0.2s;
+}
+
+.icon:hover,
+.icon:focus-visible {
+  filter: grayscale(0%);
+  outline: none;
+}
+
+.footer-right {
+  align-items: flex-end;
+  text-align: right;
+  min-width: 180px;
+  margin-right: 0;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.footer-powered {
+  margin-top: 2px;
+  font-size: 0.9em;
+}
+
+/* Responsive design*/
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .intro {
+    max-width: 90vw;
+  }
+  .profile-img {
+    width: 220px;
+    height: 220px;
+  }
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px 24px;
+  }
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .footer-right {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
