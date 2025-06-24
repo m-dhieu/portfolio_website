@@ -1,14 +1,15 @@
-// Script to create a simple interactive toggle button that switches between showing and hiding content with corresponding button text updates
+// Script for back to 'Top' button functionality
 
-const button = document.getElementById('toggleBtn');
-const text = document.getElementById('toggleText');
+const backToTopBtn = document.getElementById('backToTop');
 
-button.addEventListener('click', function() {
-  if (text.classList.contains('hidden')) {
-    text.classList.remove('hidden');
-    button.textContent = 'Masquer';
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = 'block';
   } else {
-    text.classList.add('hidden');
-    button.textContent = 'Afficher';
+    backToTopBtn.style.display = 'none';
   }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
