@@ -294,3 +294,8 @@ footer {
     align-items: flex-start;
   }
 }
+
+/* blue hover links styles */
+.blue-hover:hover {
+  color: #005fa3 !important;
+  text-decoration: underline;}
