@@ -231,6 +231,11 @@ footer {
   font-size: 0.9em;
 }
 
+.blue-hover:hover {
+  color: #005fa3 !important;
+  text-decoration: underline;
+}
+
 .footer-social {
   display: flex;
   gap: 8px;
