@@ -137,6 +137,38 @@ hr {
 }
 
 /* Back to Top button styles */
+#back-to-list {
+  display: inline-block;
+  margin-top: 0.5em;
+  padding: 0.5em 1em;
+  background-color: #808080;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1em;
+  box-shadow: 0 4px 6px #A7C7E7;
+  transition: background-color 0.3s ease; box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#back-to-list:hover {
+  background-color: #005fa3;
+}
+
+#back-to-list:focus {
+  background-color: #808080;       
+  color: white;
+  box-shadow: 0 6px 12px #A7C7E7;
+  transform: translateY(-3px);
+  outline: none;
+}
+
+#back-to-list:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px #A7C7E7;
+}
+
+/* Back to Top button styles */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -155,6 +187,12 @@ hr {
 
 #backToTop:hover {
   background-color: #ffca00;
+}
+
+/* Active nav link style */
+nav a.active {
+  color: #ffd600;
+  font-weight: bold;
 }
 
 /* Footer */
