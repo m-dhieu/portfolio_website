@@ -196,32 +196,26 @@ main {
   border: 2px solid #222;
 }
 
-/* Footer */
+/* Footer */Add commentMore actions
 footer {
   width: 100%;
   background: #fafafa;
   border-top: 1px solid #e0e0e0;
   display: flex;
-  justify-content: space-between; /* Distribute space between items */
+  justify-content: space-between;
   align-items: flex-start;
   padding: 20px 40px;
   font-size: 14px;
   box-sizing: border-box;
   margin-top: 48px;
-  flex-wrap: nowrap; /* Prevent wrapping on wide screens */
+  flex-wrap: wrap;
 }
 
-/* All footer sections to share space equally (except perhaps the last one) */
 .footer-section {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Allow sections to grow and shrink to fill space */
-  min-width: 0; /* Allow shrinking below content width if necessary */
-  margin-right: 16px; /* A bit less margin for tighter fit */
-}
-
-.footer-section:last-of-type {
-  margin-right: 0; /* Remove right margin from the last section */
+  margin-right: 24px;
+  min-width: 120px;
 }
 
 .footer-label {
@@ -258,15 +252,11 @@ footer {
   outline: none;
 }
 
-/* Ensure footer-right is handled correctly as a flex item */
 .footer-right {
-  display: flex; /* Make flex container */
-  flex-direction: column; /* Stack content vertically */
-  align-items: flex-end; /* Align content to the right */
+  align-items: flex-end;
   text-align: right;
-  flex: 1; /* Allow growing and shrinking like other sections */
-  min-width: 0; /* Allow shrinking */
-  margin-right: 0; /* No right margin for the last item */
+  min-width: 180px;
+  margin-right: 0;
   font-size: 0.9em;
   color: #444;
 }
@@ -276,7 +266,7 @@ footer {
   font-size: 0.9em;
 }
 
-/* Responsive design */
+/* Responsive design*/
 @media (max-width: 900px) {
   main {
     flex-direction: column;
@@ -290,25 +280,17 @@ footer {
     height: 220px;
   }
   footer {
-    flex-direction: column; /* Stack footer sections vertically */
+    flex-direction: column;
     gap: 16px;
     align-items: flex-start;
     padding: 16px 24px;
-    flex-wrap: nowrap; /* remain nowrap, because column layout prevents wrapping anyway */
   }
   .footer-section {
     margin-right: 0;
     margin-bottom: 8px;
-    flex: none; /* Reset flex properties for stacking */
-    width: auto; /* Allow full width */
-    min-width: auto;
   }
   .footer-right {
     text-align: left;
-    align-items: flex-start; /* Align content to the left */
-    flex: none; /* Reset flex properties for stacking */
-    width: auto; /* Allow full width */
-    min-width: auto;
+    align-items: flex-start;
   }
 }
-
