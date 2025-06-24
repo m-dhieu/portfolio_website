@@ -6,7 +6,8 @@ Projects-page Includes:
 3. Role (profession description)
 4. Navigation menu linking to other landing pages
 5. Main content area
-6. Footer section with contact info and social links
+6. Back to 'Top' button
+7. Footer section with contact info and social links
 -->
 
 <!DOCTYPE html>
@@ -16,7 +17,7 @@ Projects-page Includes:
     <title>Monica Dhieu Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link to projects page stylesheet -->
-    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="projects.css" />
 </head>
 <body>
     <!-- Header section -->
@@ -29,38 +30,61 @@ Projects-page Includes:
         <span class="role">Visual Artist</span>
         <!-- Navigation menu -->
         <nav>
-            <a href="resume.html">Resume &nbsp; &nbsp; |</a>
+            <a href="resume.html">Resume &nbsp; &nbsp; </a> 
+          <separator>|</separator>
             <!-- Active page highlighted -->
-            <a href="projects.html" class="active">Projects &nbsp; &nbsp; |</a>
+            <a href="projects.html" class="active">Projects &nbsp; &nbsp; </a>
+          <separator>|</separator>
             <a href="contact.html">Contact</a>
         </nav>
     </header> 
 
     <!-- Main content -->
-    <!-- Links open in new windows/browsers -->
     <main>
         <h1>Projects</h1>
 
         <!-- Project 1: HarMonik Codes -->
-        <section class="project">
-            <div class="project-info">
-                <h2>HarMonik Codes</h2>
-                <p style="text-align: justify;">
-                    Collection of github codes with comments and README files to guide on functionality and use. Features: the 'Mars Rover 100Sol Photo Viewer', 'TVmaze Show Search', 'Forks & Folks Recie App' and more codes at &nbsp;
-                    <a href="https://github.com/m-dhieu" target="_blank" rel="noopener">m-dhieu</a>.
-                </p>
-            </div>
-            <!-- Image representing the project -->
-            <img src="https://i.imgur.com/S5GpoqG.jpeg" alt="HarMonik Codes Image">
-        </section>    
+      <section class="project">
+  <div class="project-info">
+    <h2>HarMonik Codes</h2>
+    <p style="text-align: justify;">
+      Collection of codes in HTML, CSS, JavaScript, Python, and Linux with documentation to guide on functionality and use. Click below to view featured code snippets on this page:
+    </p>
+    <!-- Project List View -->
+    <div id="project-list">
+      <ul>
+        <li><button class="project-select" data-project="marsrover"><small>Mars Rover 100 Sol Photo Viewer</small></button></li>
+        <li><button class="project-select" data-project="tvmaze"><small>TVmaze Show Search</small></button></li>
+        <li><button class="project-select" data-project="converter"><small>Currency Converter</small></button></li>
+        <li><button class="project-select" data-project="reminder"><small>Submission Reminder App (CLI)</small></button></li>
+        <li><button class="project-select" data-project="regex"><small>Regex Data Extraction (CLI)</small></button></li>
+        <li><button class="project-select" data-project="recipe"><small>Forks &amp; Folks Recipe App (CLI)</small></button></li>
+      </ul>
+    </div>
+    <!-- Code View -->
+    <div id="code-view" style="display:none;">
+      <button id="back-to-list" class="button-link">← Back to Project List</button>
+      <h3 id="project-title"></h3>
+      <pre><code id="code-display" class="language-js">Loading Code...</code></pre>
+      <div class="links">
+        <a id="view-gist" href="#" target="_blank" rel="noopener" class="button-link">Full GitHub Codes/Files</a>
+        <a id="view-raw" href="#" target="_blank" rel="noopener" class="button-link"> Live Webpage/Documentation</a>
+      </div>
+    </div>
+    <p style="text-align: justify;">Interested in more coding projects? Or want to understand the featured code snipppets better? Visit github at &nbsp;
+      <a href="https://github.com/m-dhieu" class="blue-hover" style="color:  #808080; text-decoration: none;"><strong><em>m-dhieu</em></strong></a>.
+  </div>
+  <!-- Image representing the project -->
+  <img src="https://i.imgur.com/S5GpoqG.jpeg" alt="HarMonik Codes Image">
+</section>
 
         <!-- Project 2: HarMonik Visuals -->
         <section class="project">
             <div class="project-info">
                 <h2>HarMonik Visuals</h2>
                 <p style="text-align: justify;">
-                    Collection of photography pieces; a narration of nature's lived experiences. From vibrant sunsets to playful oceans to silent echoes, each hue whispers... These are my &nbsp;
-                    <a href="https://harmonikcollective.pixieset.com/harmonikvisuals/" target="_blank" rel="noopener">musings</a> &nbsp;—&nbsp;visual poems that celebrate the beauty, mystery, and emotion woven into the natural world.
+                    Collection of photography pieces; a narration of nature's lived experiences. From vibrant sunsets to playful oceans to silent echoes, each hue whispers stories of transformation, resilience, and fleeting moments captured in time. These images invite you to pause, reflect, and reconnect with the subtle rhythms of the earth — the dance of light and shadow, the delicate balance of life, and the profound serenity found in nature’s embrace. These are my &nbsp;
+                    <a href="https://harmonikcollective.pixieset.com/harmonikvisuals/" class="blue-hover" style="color:  #808080; text-decoration: none;"><strong><em>musings</em></strong></a> &nbsp;—&nbsp;visual poems that celebrate the beauty, mystery, and emotion woven into the natural world.
                 </p>
             </div>
             <!-- Image representing the project -->
@@ -72,8 +96,8 @@ Projects-page Includes:
             <div class="project-info">
                 <h2>HarMonik Crafts</h2>
                 <p style="text-align: justify;">
-                    A collection of art pieces — drawings, paintings, and crafts — that reflect my perception of the beauty and complexity of the human spirit. Inspired by nature’s kaleidoscope and the emotions shaping our shared experience, these works are my &nbsp;&nbsp;
-                    <a href="https://harmonikcollective.pixieset.com/harmonikcrafts/" target="_blank" rel="noopener">musings</a>.
+                    A collection of art pieces — drawings, paintings, and crafts — that embody my perception of the beauty and complexity of the human spirit. Each work is a heartfelt exploration of identity, vulnerability, and resilience, inspired by nature’s kaleidoscope and the myriad emotions that shape our shared human experience. These creations invite contemplation and connection, reflecting the subtle interplay between light and shadow, chaos and harmony, fragility and strength. These works are my &nbsp;&nbsp;
+                    <a href="https://harmonikcollective.pixieset.com/harmonikcrafts/" class="blue-hover" style="color:  #808080; text-decoration: none;"><strong><em>musings</em></strong></a>.
                 </p>
             </div>
             <!-- Image representing the project -->
@@ -81,17 +105,22 @@ Projects-page Includes:
         </section>    
     </main>
 
+    <!-- Back To Top Button -->
+    <button id="backToTop" title="Back to Top">↑</button>
+  
     <!-- Footer section with contact info and social links -->
     <footer>
         <!-- Phone contact info -->
         <div class="footer-section">
             <div class="footer-label">Phone</div>
-            <div class="footer-info">+211-988-877-748</div>
+            <div class="footer-info"</div>
+              <a href="tel:+211988877748" class="blue-hover" style="color:  #808080; text-decoration: none;"><strong>+211-988-877-748</strong></a>
         </div>
         <!-- Email contact info -->
         <div class="footer-section">
             <div class="footer-label">Email</div>
-            <div class="footer-info">m.dhieu@alustudent.com</div>
+            <div class="footer-info"</div>
+              <a href="mailto:m.dhieu@alustudent.com" class="blue-hover" style="color:  #808080; text-decoration: none;"><strong>m.dhieu@alustudent.com</strong></a>
         </div>
         <!-- Social media links -->
         <div class="footer-section">
@@ -119,6 +148,6 @@ Projects-page Includes:
     </footer>
 
     <!-- Link to the JavaScript file for simple navigation highlight -->
-    <script src="js/projects.js"></script>
+    <script src="projects.js"></script>
 </body>
 </html>
