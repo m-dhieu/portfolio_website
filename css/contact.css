@@ -166,6 +166,38 @@ button[type="submit"]:focus {
 }
 
 /* Back to Top button styles */
+#back-to-list {
+  display: inline-block;
+  margin-top: 0.5em;
+  padding: 0.5em 1em;
+  background-color: #808080;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1em;
+  box-shadow: 0 4px 6px #A7C7E7;
+  transition: background-color 0.3s ease; box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#back-to-list:hover {
+  background-color: #005fa3;
+}
+
+#back-to-list:focus {
+  background-color: #808080;       
+  color: white;
+  box-shadow: 0 6px 12px #A7C7E7;
+  transform: translateY(-3px);
+  outline: none;
+}
+
+#back-to-list:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px #A7C7E7;
+}
+
+/* Back to Top button styles */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -200,8 +232,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 28px 48px 18px 48px;
-  font-size: 15px;
+  padding: 20px 40px;
+  font-size: 14px;
   box-sizing: border-box;
   margin-top: 48px;
   flex-wrap: wrap;
@@ -210,20 +242,26 @@ footer {
 .footer-section {
   display: flex;
   flex-direction: column;
-  margin-right: 40px;
+  margin-right: 24px;
   min-width: 120px;
 }
 
 .footer-label {
   font-weight: bold;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   color: #222;
+  font-size: 0.95em;
 }
 
 .footer-info {
   color: #444;
-  margin-bottom: 8px;
-  font-size: 0.97em;
+  margin-bottom: 6px;
+  font-size: 0.9em;
+}
+
+.blue-hover:hover {
+  color: #005fa3 !important;
+  text-decoration: underline;
 }
 
 .footer-social {
@@ -261,22 +299,18 @@ footer {
   font-size: 0.9em;
 }
 
-/* Responsive */
+/* Responsive design*/
 @media (max-width: 900px) {
   main {
     flex-direction: column;
     gap: 32px;
   }
-  .contact-section {
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
+  .intro {
+    max-width: 90vw;
   }
-  .contact-info {
-    min-width: auto;
-  }
-  form {
-    flex: 1 1 100%;
+  .profile-img {
+    width: 220px;
+    height: 220px;
   }
   footer {
     flex-direction: column;
