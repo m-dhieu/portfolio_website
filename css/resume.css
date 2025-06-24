@@ -136,40 +136,31 @@ hr {
   margin: 40px 0; 
 }
 
-.skills-section {
-  display: flex; 
-  align-items: flex-start; 
-  margin: 60px 0 0 0;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #e0e0e0; 
-  margin-bottom: 40px;
+/* Back to Top button styles */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* Hidden by default */
+  background-color: #ffd600;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease;
+  z-index: 1000;
 }
 
-.skills-title {
-  flex: 1;
-  min-width: 180px;
-  margin-right: 40px;
-  font-size: 1.5em;
+#backToTop:hover {
+  background-color: #ffca00;
+}
+
+/* Active nav link style */
+nav a.active {
+  color: #ffd600;
   font-weight: bold;
-  color: #222;
-  padding-top: 4px;
-}
-
-.skills-list {
-  flex: 3;
-}
-
-.skills-list ul {
-  list-style: disc inside; 
-  margin: 0;
-  padding: 0;
-}
-
-.skills-list li {
-  margin-bottom: 18px;
-  color: #444;
-  font-size: 1.1em;
-  line-height: 1.5; /* Line height for readability */
 }
 
 /* Footer */
