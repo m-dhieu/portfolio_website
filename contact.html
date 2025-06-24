@@ -6,7 +6,8 @@ Contact-page Includes:
 3. Role (profession description)
 4. Navigation menu linking to other landing pages
 5. Main content area
-6. Footer section with contact info and social links
+6. Back to 'Top' button
+7. Footer section with contact info and social links
 -->
 
 <!DOCTYPE html>
@@ -16,7 +17,7 @@ Contact-page Includes:
     <title>Monica Dhieu Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link to the contact page CSS stylesheet -->
-    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="contact.css" />
 </head>
 <body>
     <!-- Header section -->
@@ -29,8 +30,10 @@ Contact-page Includes:
         <span class="role">Visual Artist</span>
         <!-- Navigation menu -->
         <nav>
-            <a href="resume.html">Resume &nbsp; &nbsp; |</a>
-            <a href="projects.html">Projects &nbsp; &nbsp; |</a>
+            <a href="resume.html">Resume &nbsp; &nbsp; </a>
+          <separator>|</separator>
+            <a href="projects.html">Projects &nbsp; &nbsp; </a>
+          <separator>|</separator>
             <!-- Active page highlighted -->
             <a href="contact.html" class="active">Contact</a>
         </nav>
@@ -65,18 +68,23 @@ Contact-page Includes:
             </form>
         </section>
     </main>
+  
+    <!-- Back To Top Button -->
+    <button id="backToTop" title="Back to Top">↑</button>
 
-    <!-- Footer section with contact details and social links -->
+    <!-- Footer section with contact info and social links -->
     <footer>
         <!-- Phone contact info -->
         <div class="footer-section">
             <div class="footer-label">Phone</div>
-            <div class="footer-info">+211-988-877-748</div>
+            <div class="footer-info"</div>
+              <a href="tel:+211988877748" class="blue-hover" style="color:  #808080; text-decoration: none;"><strong>+211-988-877-748</strong></a>
         </div>
         <!-- Email contact info -->
         <div class="footer-section">
             <div class="footer-label">Email</div>
-            <div class="footer-info">m.dhieu@alustudent.com</div>
+            <div class="footer-info"</div>
+              <a href="mailto:m.dhieu@alustudent.com" class="blue-hover" style="color:  #808080; text-decoration: none;"><strong>m.dhieu@alustudent.com</strong></a>
         </div>
         <!-- Social media follow section -->
         <div class="footer-section">
@@ -104,6 +112,6 @@ Contact-page Includes:
     </footer>
 
     <!-- Link to external JavaScript to handle contact form and interactions -->
-    <script src="js/contact.js"></script>
+    <script src="contact.js"></script>
 </body>
 </html>
