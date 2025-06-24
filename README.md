@@ -23,7 +23,7 @@ This is a responsive personal portfolio website showcasing Monica Dhieu's skills
 git clone https://github.com/m-dhieu/portfolio_website.git
 
 ### Step 2: Navigate to the project directory. Use:
-cd portfolio_website
+`cd portfolio_website`
 
 ### Step 3: Open the website in your browser.
 - View the webpage using GitHub Pages:  [https://m-dhieu.github.io/portfolio_website](https://m-dhieu.github.io/portfolio_website)
