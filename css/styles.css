@@ -196,6 +196,12 @@ main {
   border: 2px solid #222;
 }
 
+
+/* blue hover links styles */
+.blue-hover:hover {
+  color: #005fa3 !important;
+  text-decoration: underline;}
+
 /* Footer */
 footer {
   width: 100%;
@@ -295,7 +301,3 @@ footer {
   }
 }
 
-/* blue hover links styles */
-.blue-hover:hover {
-  color: #005fa3 !important;
-  text-decoration: underline;}
